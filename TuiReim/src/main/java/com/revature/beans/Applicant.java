@@ -86,6 +86,10 @@ public class Applicant {
 	}
 
 
+	public Applicant(String firstName, String lastName, String location, String description,
+			double amount, String eventType, String eventTime, int eidNumber) {
+		this(0, firstName, lastName, location, description, amount, "tbd", eventType, eventTime, "tbd", "tbd",  0, "pending",  "tbd", eidNumber);
+	}//call this one
 	
 
 	public int getApplicationId() {
@@ -204,11 +208,7 @@ public class Applicant {
 				+ ", eidNumber=" + eidNumber + "]";
 	}
 
-	public Applicant(String firstName, String lastName, String location, String description,
-			double amount, String eventType, String eventTime, int eidNumber) {
-		this(0, firstName, lastName, location, description, amount, "tbd", eventType, eventTime, "tbd", "awaiting_grade",  0, "pending",  "tbd", eidNumber);
-	}//call this one
-	
+
 	public Applicant(int applicationId, String firstName, String lastName, String location, String description,
 			double amount, String appDate, String eventType, String eventTime, String gradeFormat, String grade,
 			int approvallevel, String status, String reason, int eidNumber) {

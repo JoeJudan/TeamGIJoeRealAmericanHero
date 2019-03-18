@@ -79,7 +79,6 @@ public static ConFactory cf=ConFactory.getInstance();
 		}
 		return b;	
 	}
-	
 	public int getEmployeeId(String userName) throws SQLException{
 		
 		int b=0;
@@ -89,10 +88,10 @@ public static ConFactory cf=ConFactory.getInstance();
 		ResultSet rs= stmt.executeQuery("SELECT EIDNUMBER FROM USERTABLE WHERE USERNAME ='"+userName+"'");
 		if(rs.next()) {
 			 b = rs.getInt(1);
-			 System.out.println("This is b "+b);
 		}
 		return b;	
 	}
+	
 	
 	public User getUserObject(String userName) throws SQLException{
 		
@@ -114,9 +113,7 @@ public static ConFactory cf=ConFactory.getInstance();
 		Connection con = cf.getConnection();
 		
 		Statement stmt=con.createStatement();
-		
 		ResultSet rs= stmt.executeQuery("SELECT FIRSTNAME FROM USERTABLE WHERE USERNAME ='"+userName+"' AND PASSWORD1='"+passWord+"'");
-		
 		if(rs.next()) {
 			 b = rs.getString(1);
 			 return b;

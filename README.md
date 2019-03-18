@@ -1,2 +1,0 @@
-# TeamGIJoeRealAmericanHero
-Project1

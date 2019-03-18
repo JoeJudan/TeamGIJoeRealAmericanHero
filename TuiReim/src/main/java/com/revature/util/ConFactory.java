@@ -30,9 +30,9 @@ public class ConFactory {
 		try {
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn=DriverManager.getConnection("jdbc:oracle:thin:@pega21119.cmujdqw2azh8.us-east-1.rds.amazonaws.com:1521:ORCL", 
-					"joejudan", 
-					"J4alJus7");
+			conn=DriverManager.getConnection("jdbc:oracle:thin:@gsalinasvallejos.cjj9659narop.us-east-2.rds.amazonaws.com:1521:ORCL", 
+					"gsalinasvallejos", 
+					"Salinas4");
 /*			prop.load(new FileReader("database.properties"));
 			Class.forName(prop.getProperty("driver"));
 			conn=DriverManager.getConnection(prop.getProperty("url"), 

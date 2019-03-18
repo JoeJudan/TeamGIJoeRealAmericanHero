@@ -85,7 +85,7 @@ public class HomeServlet extends HttpServlet {
 			
 			String jsonString = mapper.writeValueAsString(appli);
 			//4
-			System.out.println(jsonString);
+
 			//System.out.println(jsonString);
 			response.setContentType("application/json");
 			PrintWriter pw = response.getWriter();
