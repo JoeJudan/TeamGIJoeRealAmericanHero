@@ -10,6 +10,160 @@
     <param-value>jdbc:oracle:thin:@pega21119.cmujdqw2azh8.us-east-1.rds.amazonaws.com:1521:ORCL,joejudan,J4alJus7</param-value>
   </context-param>
   
+   <servlet>
+    <description></description>
+    <display-name>BReasondsReasonServlet</display-name>
+    <servlet-name>BReasondsReasonServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BReasondsReasonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BReasondsReasonServlet</servlet-name>
+    <url-pattern>/dsreason</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>SuccessReimServlet</display-name>
+    <servlet-name>SuccessReimServlet</servlet-name>
+    <servlet-class>com.revature.servlets.SuccessReimServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SuccessReimServlet</servlet-name>
+    <url-pattern>/successc</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>BReasonServlet</display-name>
+    <servlet-name>BReasonServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BReasonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BReasonServlet</servlet-name>
+    <url-pattern>/breason</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BUpdateRequestsServlet</display-name>
+    <servlet-name>BUpdateRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BUpdateRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BUpdateRequestsServlet</servlet-name>
+    <url-pattern>/bupdateRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BApprovedRequestsServlet</display-name>
+    <servlet-name>BApprovedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BApprovedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BApprovedRequestsServlet</servlet-name>
+    <url-pattern>/bapprovedRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BDeniedRequestsServlet</display-name>
+    <servlet-name>BDeniedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BDeniedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BDeniedRequestsServlet</servlet-name>
+    <url-pattern>/bdeniedRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BAllRequestsServlet</display-name>
+    <servlet-name>BAllRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.BAllRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BAllRequestsServlet</servlet-name>
+    <url-pattern>/ballRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DhDeniedRequestsServlet</display-name>
+    <servlet-name>DhDeniedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DhDeniedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DhDeniedRequestsServlet</servlet-name>
+    <url-pattern>/dhdeniedRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DhApprovedRequestsServlet</display-name>
+    <servlet-name>DhApprovedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DhApprovedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DhApprovedRequestsServlet</servlet-name>
+    <url-pattern>/dhapprovedRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DhAllRequestsServlet</display-name>
+    <servlet-name>DhAllRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DhAllRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DhAllRequestsServlet</servlet-name>
+    <url-pattern>/dhallRequests</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>DhUpdateRequestsServlet</display-name>
+    <servlet-name>DhUpdateRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DhUpdateRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DhUpdateRequestsServlet</servlet-name>
+    <url-pattern>/dhupdateRequests</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>DeniedRequestsServlet</display-name>
+    <servlet-name>DeniedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DeniedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeniedRequestsServlet</servlet-name>
+    <url-pattern>/deniedRequests</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ApprovedRequestsServlet</display-name>
+    <servlet-name>ApprovedRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ApprovedRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApprovedRequestsServlet</servlet-name>
+    <url-pattern>/approvedRequests</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>AllRequestsServlet</display-name>
+    <servlet-name>AllRequestsServlet</servlet-name>
+    <servlet-class>com.revature.servlets.AllRequestsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllRequestsServlet</servlet-name>
+    <url-pattern>/allrequests</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ApplicantServlet</display-name>
@@ -32,29 +186,6 @@
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
   
-    <servlet>
-    <description></description>
-    <display-name>GradeFormatServlet</display-name>
-    <servlet-name>GradeFormatServlet</servlet-name>
-    <servlet-class>com.revature.servlets.GradeFormatServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>GradeFormatServlet</servlet-name>
-    <url-pattern>/gradeformat</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-    <description></description>
-    <display-name>UpdateGradeServlet</display-name>
-    <servlet-name>UpdateGradeServlet</servlet-name>
-    <servlet-class>com.revature.servlets.UpdateGradeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UpdateGradeServlet</servlet-name>
-    <url-pattern>/update</url-pattern>
-  </servlet-mapping>
-  
-  
   <servlet>
     <description></description>
     <display-name>LoginServlet</display-name>
@@ -75,6 +206,18 @@
     <servlet-name>ManagerServlet</servlet-name>
     <url-pattern>/manager</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>UpdateRequestServlet</display-name>
+    <servlet-name>UpdateRequestServlet</servlet-name>
+    <servlet-class>com.revature.servlets.UpdateRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateRequestServlet</servlet-name>
+    <url-pattern>/updaterequest</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>LogoutServlet</display-name>
@@ -84,5 +227,49 @@
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>SuccessServlet</display-name>
+    <servlet-name>SuccessServlet</servlet-name>
+    <servlet-class>com.revature.servlets.SuccessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SuccessServlet</servlet-name>
+    <url-pattern>/success</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>DeniedServlet</display-name>
+    <servlet-name>DeniedServlet</servlet-name>
+    <servlet-class>com.revature.servlets.DeniedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeniedServlet</servlet-name>
+    <url-pattern>/denied</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>ErrorServlet</display-name>
+    <servlet-name>ErrorServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ErrorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ErrorServlet</servlet-name>
+    <url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ReasonServlet</display-name>
+    <servlet-name>ReasonServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ReasonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReasonServlet</servlet-name>
+    <url-pattern>/reason</url-pattern>
   </servlet-mapping>
 </web-app>
