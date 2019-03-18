@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Reimbursement Application</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Company Brand Name -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="home">Tuition Reimbursement
+					Management Application</a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="home">Home</a></li>
+			</ul>
+
+			<!-- Login and Logout -->
+			<ul class="nav navbar-nav navbar-right">
+				<li id="logout"><a href="logout"> <span
+						class="glyphicon glyphicon-log-out"></span> Logout
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div id="divapp" class="panel-default">
+				<div class="panel-heading">
+					<h1 class="text-center">Tuition Reimbursement Account Application Form</h1>
+				</div>
+				<div class="panel-body">
+					
+					<!-- Reimbursement Form -->
+					
+					<form id="applicant" action="applicant" method="POST">
+						<!-- Name -->
+						<div class="form-group">
+							<label for="fname"><b>First Name</b></label>
+							<input type="text" class="form-control" id="fname" placeholder="Enter First Name" 
+							name="fname" required="required">
+						</div>
+						<div class="form-group">
+							<label for="lname"><b>Last Name</b></label>
+							<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" 
+							name="lname" required="required">
+
+						  </div>
+						
+						
+						<!-- Employee ID -->
+						<input type="hidden" id="employeeid" name="employeeid" value="" />
+						<input type="hidden" id="currentDate" name="currentDate" value="" />
+						<input type="hidden" id="estimate" name="estimate" value="" />
+						<div class="form-group">
+							<label for="uname"><b>Username</b></label>
+							<input type="text" class="form-control" id="uname" placeholder="Create a User Name" 
+							name="uname" required="required">
+						</div>
+						<div class="form-group">
+							<label for="pword"><b>Password</b></label>
+							<input type="password" class="form-control" id="pword" placeholder="Create a password" 
+							name="pword" required="required">
+
+						  </div>
+						<!-- Email -->  
+						  <div class="form-group">
+							<label for="emaila"><b>Email address</b></label>
+							<input type="email" name="emaila" class="form-control" id="emaila" placeholder="Enter email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						  </div>
+						<!-- Event Type -->
+						<div class="form-group">
+							<label for="etype">Event Type:</label> <select
+								name="etype" class="form-control" id="etype"
+								required="required">
+								<option value="University_Courses" selected="selected">University Courses</option>
+								<option value="Seminars">Seminars</option>
+								<option value="Certification_Preparation_Classes">Certification Preparation Classes</option>
+								<option value="Certification">Certification</option>
+								<option value="Technical_Training">Technical Training</option>
+								<option value="Others">Others</option>
+							</select>
+						</div>
+
+
+						<!-- Event Date -->
+						<div class="form-group">	
+							<label for="edate">Date of Event:</label> <input type="date"
+								name="edate" class="form-control" id="edate"
+								required="required">
+						</div>
+
+						<!-- Event Description -->
+						<div class="form-group">
+							<label for="descr">Description:</label>
+							<input type="text" class="form-control" id="descr"
+								name="descr"
+								placeholder="Describe role relationship "
+								required="required">
+						</div>
+
+						<!-- Event Location -->
+						<div class="form-group">
+							<!-- Address 1 -->
+							<label for="locat">Location of Event:</label> <input
+								type="text" class="form-control" id="locat"
+								name="locat" placeholder="Enter address"
+								required="required">
+
+						</div>
+
+						<!-- Request Amount -->
+						<div class="form-group">
+							<label for="amount">Cost of Event:</label> <input
+								type="number" class="form-control" id="amount" name="amount"
+								step="0.01" value='0.00' placeholder='0.00'
+								required="required">
+						</div>
+
+						<!-- Reimbursement Amount -->
+						<div class="form-group">
+							<label for="ramount">Estimated Reimbursement
+								Amount: </label> <input type="number" class="form-control"
+								name="ramount" id="ramount" max="1000"
+								disabled="disabled">
+						</div>
+
+						<!-- File Attachment -->
+						<label for="attachedfile">Attachments:</label> <input
+							type="file" id="attachedfile" name="attachedfile"
+							accept=".pdf, .png, .jpeg, .jpg, .txt, .doc, .msg" /> <br />
+						<!-- Submit -->
+						<button type="submit" class="btn btn-success btn-block">Submit</button>
+
+					</form>
+				</div>
+				<div class="panel-footer"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="applicant.js"></script>
+</body>
+
+</html>

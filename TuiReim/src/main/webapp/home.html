@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Company Brand Name -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Tuition Reimbursement Management Application</a>
+            </div>
+			
+			<ul class="nav navbar-nav">
+				<li><a href="gradeformat.html">Grading Format</a></li>
+			</ul>
+            <!-- Logout -->
+            <ul class="nav navbar-nav navbar-right">
+                <li id="logout"><a href="login.html"><span class="glyphicon glyphicon-log-out">Logout</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!--     <div class="container-fluid breadcrumb-wrapper">
+        <ol class="breadcrumb hidden-xs hidden-sm" role="navigation">
+            <li><a href="#">Messages</a></li>
+            <li><a href="table.html">View History</a></li>
+        </ol>
+    </div> -->
+<p>Log In Successful<p>
+<div>
+	<!-- Address 1 -->
+	<label for="username">Name:</label> 
+	<p id="firstname" ></p>	<p id="lastname" ></p>
+</div>
+<br>
+<input type="button" id="myBtn" value="View my requests"/>
+<br>
+
+    <!-- Reimbursement Form -->
+    <h3>Reimbursement Application View</h3>
+    <div class="split2 right">
+    <table id="lefttable" class="table table-striped table-hover">
+            <thead>
+            <tr>
+              <th><h4>Application ID</h4></th>
+              <th><h4>Application Type</h4></th>
+              <th><h4>Application Date</h4></th>
+              <th><h4>Target Date</h4></th>
+              <th><h4>Amount</h4></th>
+              <th><h4>Grade</h4></th>
+              <th><h4>Status</h4></th>
+              <th><h4>Reason</h4></th>
+            </tr>
+          </thead>
+          <tr id="cell">
+              <td id="applicationid"></td>
+              <td id="eventtype"></td>
+              <td id="appdate"></td>
+              <td id="eventdate"></td>
+              <td id="amount"></td>
+              <td id="grade"></td>
+              <td id="status"></td>
+              <td id="reason"></td>
+            </tr>
+		</table>
+		
+		</div>
+      <script type="text/javascript" src="home.js"></script>
+
+<form action="update" method="POST">
+	<div >
+	<button class="toggle" id="upDate" value="Update Profile">Update Grade</button>
+            <table id="righttable">
+            <thead>
+
+          </thead>     
+            </table>   
+
+		</div>
+	
+</form>
+
+</body>
+</html>
