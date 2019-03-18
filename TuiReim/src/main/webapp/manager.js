@@ -3,37 +3,39 @@ function loadString(jString){
 
 	let table = document.getElementById("lefttable");
 	
-	for(i in jString){
+	if(jString != null){
+		for(i in jString){
+		let newRow = document.createElement("tr");
+		document.getElementById.innerHTML=jString[i].firstName;
+		document.getElementById.innerHTML=jString[i].lastName;	
+		document.getElementById.innerHTML=jString[i].applicationId;
+		document.getElementById.innerHTML=jString[i].eventType;
+		document.getElementById.innerHTML=jString[i].appDate;
+		document.getElementById.innerHTML=jString[i].eventTime;
+		document.getElementById.innerHTML="$"+jString[i].amount;
+		document.getElementById.innerHTML=jString[i].approvallevel;
+		document.getElementById.innerHTML=jString[i].status;
+		document.getElementById.innerHTML=jString[i].reason;
 	
-	let newRow = document.createElement("tr");
-	document.getElementById.innerHTML=jString[i].firstName;
-	document.getElementById.innerHTML=jString[i].lastName;	
-	document.getElementById.innerHTML=jString[i].applicationId;
-	document.getElementById.innerHTML=jString[i].eventType;
-	document.getElementById.innerHTML=jString[i].appDate;
-	document.getElementById.innerHTML=jString[i].eventTime;
-	document.getElementById.innerHTML="$"+jString[i].amount;
-	document.getElementById.innerHTML=jString[i].approvallevel;
-	document.getElementById.innerHTML=jString[i].status;
-	document.getElementById.innerHTML=jString[i].reason;
-
-    newRow.innerHTML =
-    	
-    `<tr id="cell">
-    <td>${jString[i].firstName}</td>
-    <td>${jString[i].lastName}</td>
-    <td>${jString[i].applicationId}</td>
-    <td>${jString[i].eventType}</td>
-    <td>${jString[i].appDate}</td>
-    <td>${jString[i].eventTime}</td>
-    <td>${"$"+jString[i].amount}</td>
-    <td>${jString[i].approvallevel}</td>
-    <td>${jString[i].status}</td>
-    <td>${jString[i].reason}</td>
-    </tr>`;
-    
-    table.appendChild(newRow);
-	}	
+	    newRow.innerHTML =
+	    	
+	    `<tr id="cell">
+	    <td>${jString[i].firstName}</td>
+	    <td>${jString[i].lastName}</td>
+	    <td>${jString[i].applicationId}</td>
+	    <td>${jString[i].eventType}</td>
+	    <td>${jString[i].appDate}</td>
+	    <td>${jString[i].eventTime}</td>
+	    <td>${"$"+jString[i].amount}</td>
+	    <td><a href="#">${jString[i].approvallevel}</a></td>
+	    <td>${jString[i].status}</td>
+	    <td>${jString[i].reason}</td>
+	    </tr>`;
+	    
+	    table.appendChild(newRow);
+		}
+	}else 
+		alert("There is no request for this option yet");	
 }
 
 function allPending(){
@@ -79,13 +81,13 @@ function allRequests(){
 			loadString(jString);		
 		}
 	}
-	xhr.open("POST", "manager", true);
+	xhr.open("POST", "manager?status="+"", true);
 	xhr.send();
 }
 
-window.onload = function(){
+//window.addEventListener("load", allPending, false);
 
-	document.getElementById("Pending").addEventListener("click", allPending, false);
+window.onload = function(){
 	document.getElementById("allRequests").addEventListener("click", allRequests, false);
 	document.getElementById("Denied").addEventListener("click", deniedRequests, false);
 }

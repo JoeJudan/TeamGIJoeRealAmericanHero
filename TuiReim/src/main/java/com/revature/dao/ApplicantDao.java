@@ -15,6 +15,6 @@ public interface ApplicantDao {
 	//
 	public abstract List<Applicant> getApplicantList(int emp) throws SQLException;
 	//
-	public abstract boolean validation(String password, String username) throws SQLException; 
+	public abstract boolean validation(int aid) throws SQLException; 
 
 }
