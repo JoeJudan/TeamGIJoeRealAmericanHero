@@ -1,24 +1,15 @@
-
-
 function loadString(jString){
     document.getElementById("applicationid").innerHTML=jString.applicationId;
     document.getElementById("eventtype").innerHTML=jString.eventType;
     document.getElementById("appdate").innerHTML=jString.appDate;
     document.getElementById("eventdate").innerHTML=jString.eventTime;
     document.getElementById("amount").innerHTML="$"+jString.amount;
+    document.getElementById("grade").innerHTML=jString.grade;
     document.getElementById("status").innerHTML=jString.status;
     document.getElementById("reason").innerHTML=jString.reason;
     document.getElementById("firstname", "lastname").innerHTML=jString.firstName+" "+jString.lastName;
 
 }
-
-
-/*function viewInfo()
-{
-	window.open('http://localhost:8080/TuiReim/HomeServlet');
-}*/
-
-
 function handleEvent(jString2){
 	
 	var  uname =jString2;
@@ -32,17 +23,13 @@ function handleEvent(jString2){
 			loadString(jString);		
 		}
 	
-	}
-	
-//		xhr.open("POST", "home", true);
-		xhr.open("POST", "home?username="+uname, true);
-	
+	}	
+	xhr.open("POST", "home?username="+uname, true);	
 	xhr.send();
 }
 
 function loadEvent(){
 	
-
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function(){
 		console.log("This is being called");
@@ -57,50 +44,41 @@ function loadEvent(){
 		xhr.send();
 }
 
-
+function getUpdate(){
+	document.getElementById("upDate").addEventListener("hidden", getUpdate, false);
+	let table = document.getElementById("righttable");
+	let newRow = document.createElement("tr");
+	
+    newRow.innerHTML =
+    	
+    	`<table>
+    	<tr id="cell">
+	    	<td>
+		    	<label for="lname">
+		    		<b>Update Grade</b>
+		    	</label>
+		    	<input type="text" class="form-control" id="lname" placeholder="Enter Grade" 
+				name="grade" required="required">
+			</td>
+	    </tr>
+	    
+    	<tr id="cell">
+		    <td>
+		    	<label for="attachedfile">
+		    		<b>Attachments Supporting Docs:</b>
+		    	</label> 
+		    		<input	type="file" id="attachedfile" name="attachedfile"
+								accept=".pdf, .png, .jpeg, .jpg, .txt, .doc, .msg" /> <br />
+			</td>
+		</tr>
+		</table>				
+	<button type="submit" class="btn btn-primary btn-block">Submit</button>`;
+    
+    table.appendChild(newRow);
+}
 
 window.onload = function(){
 
 	document.getElementById("myBtn").addEventListener("click", loadEvent, false);
-	
+	document.getElementById("upDate").addEventListener("click", getUpdate, false);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function loadCharacter(character){
-    document.getElementById("name").innerHTML=character.name;
-}
-function getCharacter(){
-    console.log("test check number 1");
-    var characterID = document.getElementById("swID").value;
-    //Step 1
-    var xhr= new XMLHttpRequest();
-    //Step 2
-    xhr.onreadystatechange= function(){
-        console.log("test check number 2");
-        if(xhr.readyState==4 && xhr.status==200){
-            console.log(xhr.responseText);
-            var character= JSON.parse(xhr.responseText);
-            loadCharacter(character);
-        }
-    }
-    //Step 3
-    xhr.open("GET","/dataBase"+characterID,true);
-    //Step 4
-    xhr.send();
-}
-window.onload= function(){
-    console.log("in onload");
-    document.getElementById("starwarssubmit").addEventListener("click",getCharacter,false);
-}*/

@@ -47,17 +47,7 @@ public class ManagerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost of ManagerServlet");
 	
-		String status = request.getParameter("status");//value for status of the applicant
-		//String levelOfApproval = request.getParameter("loa");//value for the approval level
-		//this goes to the dao
-		//int loa = Integer.parseInt(levelOfApproval);
-		
-		//System.out.println(levelOfApproval);
-		HttpSession session = request.getSession(true);
-		User user = (User) session.getAttribute("user");
-		int type = user.getUserType(); 
-		System.out.println("type: " + type);
-		
+		String status = request.getParameter("status");//value being passed	
 		
 		System.out.println("This is what is being assigned: "+status);
 		
@@ -68,50 +58,16 @@ public class ManagerServlet extends HttpServlet {
 		
 		
 		try {
-			if(status.equals("denied")) {
-				List<Applicant> a = adi.getApplicantList(status);
-				String jsonString = mapper.writeValueAsString(a);
-				
-				System.out.println(jsonString);
-				
-				response.setContentType("application/json");
-				PrintWriter pw = response.getWriter();
-				pw.print(jsonString);
-	
-				pw.close();
-			}else if(status.equals("approved")) {
-				List<Applicant> a = adi.getApplicantList(status);
-				String jsonString = mapper.writeValueAsString(a);
-				
-				System.out.println(jsonString);
-				
-				response.setContentType("application/json");
-				PrintWriter pw = response.getWriter();
-				pw.print(jsonString);
-
-				pw.close();
+			List<Applicant> a = adi.getApplicantList(status);
+			String jsonString = mapper.writeValueAsString(a);
 			
-			}else if(status.equals("pending")) {
-				List<Applicant> a = adi.getApplicantList(status, type-1);
-				String jsonString = mapper.writeValueAsString(a);
-				System.out.println(jsonString);
-				response.setContentType("application/json");
-				PrintWriter pw = response.getWriter();
-				pw.print(jsonString);
+			System.out.println(jsonString);
+			
+			response.setContentType("application/json");
+			PrintWriter pw = response.getWriter();
+			pw.print(jsonString);
 
-				pw.close();
-			}else if(status.isEmpty()) {
-				List<Applicant> a = adi.getApplicantList();
-				String jsonString = mapper.writeValueAsString(a);
-				
-				System.out.println(jsonString);
-				
-				response.setContentType("application/json");
-				PrintWriter pw = response.getWriter();
-				pw.print(jsonString);
-
-				pw.close();
-			}
+			pw.close();
 		
 		
 		} catch (JsonProcessingException e) {

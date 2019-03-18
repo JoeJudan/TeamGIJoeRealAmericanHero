@@ -59,52 +59,23 @@ public class LoginServlet extends HttpServlet {
 			System.out.println(use+"\nCheck if this is null");
 
 			// employee
-//			if (use.getUserType() > 0 && use.getUserType() < 2) {
-//				
-//				HttpSession session = request.getSession(true);
-//				session.setAttribute("user", use);
-//				session.setAttribute("eidNum", use.getEidNumber());
-//				response.sendRedirect("home.html");	
-//			}
-//			else
-//				if(use.getUserType() > 1 && use.getUserType() < 3) {
-//					HttpSession session = request.getSession(true);
-//					session.setAttribute("user", use);
-//					session.setAttribute("eidNum", use.getEidNumber());
-//					response.sendRedirect("manager.html");	
-//					
-//				}
-//			// Lets the user know the username and password don't match any employee records
-//			else {
-//				PrintWriter pw = response.getWriter();
-//				response.setContentType("text/html");
-//				pw.println("<script type=\"text/javascript\">");
-//				pw.println("alert(\"Can't find User Name or Pass Word!\");");
-//				pw.println("</script>");
-//				request.getRequestDispatcher("login.html").include(request, response);
-//				pw.close();
-//			}
-			if(use.getUserType() == 1) {
+			if (use.getUserType() > 0 && use.getUserType() < 2) {
+				
 				HttpSession session = request.getSession(true);
 				session.setAttribute("user", use);
 				session.setAttribute("eidNum", use.getEidNumber());
-				response.sendRedirect("manager.html");	
-			}else if(use.getUserType() == 2) {
-				HttpSession session = request.getSession(true);
-				session.setAttribute("user", use);
-				session.setAttribute("eidNum", use.getEidNumber());
-				response.sendRedirect("DepartmentHead.html");	
-			}else if(use.getUserType() == 3) {
-				HttpSession session = request.getSession(true);
-				session.setAttribute("user", use);
-				session.setAttribute("eidNum", use.getEidNumber());
-				response.sendRedirect("Benco.html");	
-			}else if(use.getUserType() == 0) {
-				HttpSession session = request.getSession(true);
-				session.setAttribute("user", use);
-				session.setAttribute("eidNum", use.getEidNumber());
-				response.sendRedirect("home.html");
-			}else {
+				response.sendRedirect("home.html");	
+			}
+			else
+				if(use.getUserType() > 1 && use.getUserType() < 3) {
+					HttpSession session = request.getSession(true);
+					session.setAttribute("user", use);
+					session.setAttribute("eidNum", use.getEidNumber());
+					response.sendRedirect("manager.html");	
+					
+				}
+			// Lets the user know the username and password don't match any employee records
+			else {
 				PrintWriter pw = response.getWriter();
 				response.setContentType("text/html");
 				pw.println("<script type=\"text/javascript\">");

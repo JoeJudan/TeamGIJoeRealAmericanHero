@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Grade Format</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Company Brand Name -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="home">Tuition Reimbursement
+					Management Grade Format</a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="home.html">home</a></li>
+			</ul>
+
+			<!-- Login and Logout -->
+			<ul class="nav navbar-nav navbar-right">
+				<li id="logout"><a href="logout"> <span
+						class="glyphicon glyphicon-log-out"></span> Logout
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div id="divapp" class="panel-default">
+				<div class="panel-heading">
+					<h1 class="text-center">Tuition Reimbursement Grade Formatting</h1>
+				</div>
+				<div class="panel-body">
+					
+					<!-- Reimbursement Form -->
+					
+					<form >
+						
+						<!-- Event Type -->
+						<div class="form-group">
+							<label for="etype">Event Type:</label> <select
+								name="etype" class="form-control" id="etype"
+								required="required">
+								<option value="universitycourses" selected="selected">University Courses</option>
+								<option value="seminars">Seminars</option>
+								<option value="certificationpreparation">Certification Preparation Classes</option>
+								<option value="certification">Certification</option>
+								<option value="technicaltraining">Technical Training</option>
+								<option value="others">Others</option>
+							</select>
+						</div>
+
+						<!-- Event Type -->
+						<div class="form-group">
+							<label for="grade">Grade:</label> <select
+								name="grade" class="form-control" id="grade"
+								required="required">
+								<option value="over79" selected="selected">A grade of 80 or over.</option>
+								<option value="between70to79">A grade from 70 to 79</option>
+								<option value="under70">A grade under 70</option>
+								<option value="n/a">Not Applicable</option>
+
+							</select>
+						</div>
+
+						<!-- Submit -->
+						<input type="button" id="myBtn" value="submit">
+
+					</form>
+					<div>
+						<h2 id="decision"></h2>
+					</div>
+				</div>
+				<div class="panel-footer"></div>
+				<a href="updaterequest">home</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="gradeformat.js"></script>
+</body>
+
+</html>
